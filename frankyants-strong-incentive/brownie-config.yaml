@@ -35,7 +35,7 @@ networks:
     # Change to True if you have an Etherscan API key and want to verify
     verify: False
     update_interval: 60
-    api_consumer_address: '0xAbF19c0B18B7E520A477308Ae30EB68Bb4e46362'
+    api_consumer_address: '0xe88aC8488c4a4D96e347140aDd04D0671e03b4D6'
   ganache:
     keyhash: '0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4'
     fee: 100000000000000000

@@ -1,4 +1,4 @@
-from brownie import Counter, config
+from brownie import Trigger, config
 from scripts.helpful_scripts import get_account
 
 # TODO: create/update the necessary mocks. Delete unnecessary ones.
@@ -7,7 +7,7 @@ def test_can_call_check_upkeep():
     # Arrange
     interval = 2
     account = get_account()
-    counter = Counter.deploy(
+    counter = Trigger.deploy(
         interval, 
         config["networks"]["kovan"]["api_consumer_address"],
         {"from": account}
