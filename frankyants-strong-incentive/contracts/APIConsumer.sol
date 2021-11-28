@@ -58,7 +58,7 @@ contract APIConsumer is ChainlinkClient {
      * Create a Chainlink request to retrieve API response and find the target
      * data.
      */
-    function requestVolumeData() public returns (bytes32 requestId) 
+    function requestRewardData() public returns (bytes32 requestId) 
     {
         Chainlink.Request memory request = buildChainlinkRequest(
             jobId,

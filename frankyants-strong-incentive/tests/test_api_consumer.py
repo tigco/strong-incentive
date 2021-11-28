@@ -36,7 +36,7 @@ def test_send_api_request_local(
         api_contract.address, chainlink_fee * 2, {"from": get_account()}
     )
     # Act
-    transaction_receipt = api_contract.requestVolumeData({"from": get_account()})
+    transaction_receipt = api_contract.requestRewardData({"from": get_account()})
     requestId = transaction_receipt.events["ChainlinkRequested"]["id"]
     # Assert
     get_contract("oracle").fulfillOracleRequest(
@@ -55,7 +55,7 @@ def test_send_api_request_testnet(deploy_api_contract, chainlink_fee):
         api_contract.address, chainlink_fee * 2, {"from": get_account()}
     )
     # Act
-    transaction = api_contract.requestVolumeData({"from": get_account()})
+    transaction = api_contract.requestRewardData({"from": get_account()})
     # Assert
     assert transaction is not None
     transaction.wait(2)
