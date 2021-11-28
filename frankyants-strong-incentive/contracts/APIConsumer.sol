@@ -48,7 +48,7 @@ contract APIConsumer is ChainlinkClient {
     {
         // Only for new hosts!
         // TODO: Implement other methods to support update etc, e.g. if deviceHosts.indexOf(_host) then update, else add
-        // TODO: Confirm both host address (_host) and devise index (_hostedDevice) have valid values if () {}
+        // TODO: Confirm both host address (_host) and device index (_hostedDevice) have valid values if () {}
 
         deviceHosts.push(payable(_host));
         hostedDevices[_host] = _hostedDevices;
